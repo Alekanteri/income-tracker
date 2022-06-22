@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./Extends.module.scss"
 
-const Extends = () => {
+const Extends: React.FC = () => {
   return (
     <div>Extends</div>
   )
