@@ -1,9 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./Income.module.scss";
 
-const Income: React.FC = () => {
+const Income: React.FC<any> = ({AddIncome}: any) => {
   const [income, setIncome] = useState<Array<any>>([]); //Fix type in the future.
   const [totalIncome, setTotalIncome] = useState<number>(0);
+
+  const AddDifferent = (value: number) => {
+    AddIncome(value)
+  }
 
   const description = useRef<HTMLInputElement>(null);
   const price = useRef<HTMLInputElement>(null);
@@ -30,6 +34,7 @@ const Income: React.FC = () => {
     for (let i = 0; i < income.length; i++) {
       temp += parseInt(income[i].price);
     }
+    AddDifferent(temp);
     setTotalIncome(temp);
   }, [income]);
 

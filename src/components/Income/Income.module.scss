@@ -1,16 +1,18 @@
+@use "../../var" as *;
+
 .IncomeBody {
   max-width: 600px;
   height: 40rem;
   padding: 2rem;
-  border: 3px solid #008000;
+  border: 3px solid $income-border;
   border-radius: 1rem;
-  background-color: #ffffff;
+  background-color: $primary-white-color;
 }
 
 .IncomeContainer {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #000000;
+  border-top: 1px solid $primary-black-color;
   margin-top: 2rem;
 }
 
@@ -18,7 +20,7 @@
   margin: 1rem 0;
 
   .FormInner {
-    border: 2px solid #ffb700;
+    border: 2px solid $input-border-color;
     border-radius: .5rem;
 
     input {
@@ -27,8 +29,8 @@
       padding: 5px;
 
       &[type="submit"] {
-        background-color: #4e7aff;
-        color: #ffffff;
+        background-color: $btn-color;
+        color: $primary-white-color;
         height: 100%;
         padding: 6px;
         border-radius: 0 .4rem .4rem 0;
@@ -49,7 +51,7 @@
     margin: 0.5rem;
     display: flex;
     justify-content: space-around;
-    background-color: #f5f5f5;
+    background-color: $list-item-color;
     border-radius: 0.5rem;
   }
 }

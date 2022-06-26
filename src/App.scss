@@ -1,3 +1,5 @@
+@use "./var" as *;
+
 .container {
   margin: 0 auto;
   width: 100%;
@@ -5,4 +7,17 @@
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr;
+}
+
+.Total {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem;
+  font-weight: 900;
+  font-size: 2rem;
+  border: 2px solid $primary-black-color;
+  border-radius: 0.5rem;
+  background-color: $primary-white-color;
 }
